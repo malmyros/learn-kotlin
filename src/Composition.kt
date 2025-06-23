@@ -1,5 +1,16 @@
 fun main() {
 
+    val dog = BDog()
+    val cleaningRobot = BCleaningRobot()
+    val cleaningRobotDog = CClearingRobotDog(
+        dog = dog,
+        cleaningRobot = cleaningRobot,
+    )
+
+    cleaningRobotDog.move()
+    cleaningRobotDog.run()
+    cleaningRobotDog.bark()
+    cleaningRobotDog.clean()
 }
 
 interface BAnimal {
@@ -62,11 +73,10 @@ class BCleaningRobotDog : BAnimal, BRobot, BDog() {
     }
 }
 
-class CClearingRobotDog {
-
-    private val dog = BDog()
-
-    private val cleaningRobot = BCleaningRobot()
+class CClearingRobotDog(
+    private val dog: BDog,
+    private val cleaningRobot: BCleaningRobot
+) {
 
     fun run() {
         dog.run()
