@@ -62,6 +62,29 @@ class BCleaningRobotDog : BAnimal, BRobot, BDog() {
     }
 }
 
+class CClearingRobotDog {
+
+    private val dog = BDog()
+
+    private val cleaningRobot = BCleaningRobot()
+
+    fun run() {
+        dog.run()
+    }
+
+    fun move() {
+        cleaningRobot.move()
+    }
+
+    fun bark() {
+        dog.bark()
+    }
+
+    fun clean() {
+        cleaningRobot.clean()
+    }
+}
+
 class BParent {
     fun getFood() {
         println("I am eating food")
