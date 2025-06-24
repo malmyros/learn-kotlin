@@ -24,7 +24,7 @@ fun getVehicle(vehicle: BVehicle): String = when (vehicle) {
 }
 
 
-sealed class SAnimal {
+sealed class KAnimal {
 
     val legs: Int = 4
 
